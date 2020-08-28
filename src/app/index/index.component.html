@@ -1,0 +1,19 @@
+<select #race (change)="dispatchRace(race.value)" placeholder="Select a race">
+    <option value="Elf">Elf</option>
+    <option value="Orc">Orc</option>
+    <option value="Dwarf">Dwarf</option>
+</select>
+
+<select #spec (change)="dispatchSpecialty(spec.value)" placeholder="Select a specialty">
+    <option value="Warrior">Warrior</option>
+    <option value="Berzerkrer">Berzerkrer</option>
+    <option value="Healer">Healer</option>
+</select>
+
+<p>
+    Current race: {{ (currentRace | async) || 'None' }}
+</p>
+<p>
+    Current Spec: {{ (currentSpecialty | async) || 'None' }}
+</p>
+<a routerLink="/test">Test Store data in different component</a>
